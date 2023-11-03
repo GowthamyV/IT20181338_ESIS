@@ -1,0 +1,202 @@
+@import "../../../../assets/sass/theme/primary.sass";
+
+.login {
+  height: 100vh;
+  width: 100%;
+  background: $bg_light;
+  position: relative;
+
+  .login_box {
+    width: 85%;
+    height: 90vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 1px 4px 22px -8px #0004;
+    display: flex;
+    overflow: hidden;
+
+    .left {
+      width: 40%;
+      height: 100%;
+      padding: 25px 25px;
+      background: linear-gradient(-45deg, #dcd7e0, #fff);
+      .top_link {
+        height: 20px;
+        a {
+          color: #452a5a;
+          font-weight: 400;
+        }
+      }
+      .contact {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+        height: 100%;
+        width: 73%;
+        margin: auto;
+        h3 {
+          text-align: center;
+          margin-bottom: 40px;
+          color: $primary-color;
+        }
+
+        input {
+          border: none;
+          width: 80%;
+          margin: 15px 0px;
+          border-bottom: 1px solid $primary-color !important;
+          padding: 7px 9px;
+          width: 100%;
+          overflow: hidden;
+          background: transparent;
+          font-weight: 600;
+          font-size: 14px;
+          border: none;
+          outline: none;
+        }
+        .submit {
+          border: none;
+          padding: 15px 70px;
+          border-radius: 8px;
+          display: block;
+          margin: auto;
+          margin-top: 120px;
+          background: $primary-color;
+          color: #fff;
+          font-weight: bold;
+          -webkit-box-shadow: 0px 9px 15px -11px rgba(88, 54, 114, 1);
+          -moz-box-shadow: 0px 9px 15px -11px rgba(88, 54, 114, 1);
+          box-shadow: 0px 9px 15px -11px rgba(88, 54, 114, 1);
+        }
+      }
+    }
+    .right {
+      position: relative;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(
+          212.38deg,
+          rgba(17, 141, 243, 0.5) 0%,
+          rgba(78, 143, 241, 0.5) 100%
+        ),
+        url(../../../../assets/images/products/5.jpg);
+      color: #fff;
+      position: relative;
+      background-repeat: no-repeat;
+      background-size: cover;
+      overflow: hidden;
+
+      .circle1 {
+        width: 150px;
+        height: 150px;
+        background: #ffffff;
+        border-radius: 50%;
+        opacity: 0.2;
+        position: absolute;
+        left: 10%;
+        top: 5%;
+        animation: circleone ease-in-out infinite;
+        transition: ease 0.5s;
+        animation-duration: 10s;
+      }
+
+      .circle2 {
+        width: 320px;
+        height: 320px;
+        background: #ffffff;
+        border-radius: 50%;
+        opacity: 0.2;
+        position: absolute;
+        right: 10%;
+        bottom: 5%;
+        animation: circletwo ease-in-out infinite;
+        transition: ease 0.5s;
+        animation-duration: 10s;
+      }
+
+      @keyframes circleone {
+        0% {
+          transform: translateY(-50%) translateX(-50%);
+        }
+        50% {
+          transform: translateY(0%) translateX(0%);
+        }
+        100% {
+          transform: translateY(-50%) translateX(-50%);
+        }
+      }
+
+      @keyframes circletwo {
+        0% {
+          transform: translateY(-20%) translateX(-40%);
+        }
+        35% {
+          transform: translateY(4%) translateX(4%);
+        }
+        70% {
+          transform: translateY(-8%) translateX(30%);
+        }
+        100% {
+          transform: translateY(-20%) translateX(-40%);
+        }
+      }
+
+      .right-text {
+        height: 100%;
+        position: relative;
+        transform: translate(0%, 45%);
+        h2 {
+          display: block;
+          width: 100%;
+          text-align: center;
+          font-size: 50px;
+          font-weight: 500;
+        }
+        h5 {
+          display: block;
+          width: 100%;
+          text-align: center;
+          font-size: 19px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1250px) {
+  .login_box {
+    width: 95% !important;
+    height: 50vh !important;
+
+    .contact {
+      width: 100% !important;
+
+      .submit {
+        margin-top: 50px !important;
+      }
+    }
+
+    .circle1 {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .login_box {
+    height: 90vh !important;
+    .left {
+      width: 100% !important;
+    }
+
+    .right {
+      display: none;
+    }
+  }
+}

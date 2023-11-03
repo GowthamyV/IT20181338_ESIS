@@ -1,0 +1,39 @@
+<div class="container">
+  <!-- Card deck -->
+  <div class="card-deck row">
+    <div
+      class="col-xs-12 col-sm-6 col-md-4"
+      *ngFor="let data of $Products | async"
+    >
+      <!-- Card -->
+      <div class="card">
+        <!--Card image-->
+        <div class="view overlay">
+          <img
+            class="card-img-top"
+            src="{{ data.imageUrl }}"
+            alt="Card image cap"
+          />
+          <a href="#!">
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+
+        <!--Card content-->
+        <div class="card-body">
+          <!--Title-->
+          <h4 class="card-title">{{ data.name }}</h4>
+          <!--Text-->
+          <p class="card-text">Available Size : {{ data.size }}</p>
+          <p class="card-text">Rs.{{ data.price }}</p>
+          <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+          <!-- <button type="button" class="btn btn-light-blue btn-md">
+            View Product
+          </button> -->
+        </div>
+      </div>
+      <!-- Card -->
+    </div>
+  </div>
+  <!-- Card deck -->
+</div>

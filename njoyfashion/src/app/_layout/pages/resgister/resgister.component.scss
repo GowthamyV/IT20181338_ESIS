@@ -1,0 +1,197 @@
+@import "../../../../assets/sass/theme/_primary.sass";
+
+.register-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $bg_light;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0rem 1rem;
+  background: linear-gradient(
+      212.38deg,
+      rgba(15, 3, 59, 0.75) 0%,
+      rgba(39, 3, 105, 0.75) 100%
+    ),
+    url(../../../../assets/images/products/register-main-bg.jpg);
+}
+
+.reg-head {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  h1 {
+    color: #ffffff;
+    font-size: 4rem;
+    line-height: 4.8rem;
+  }
+  span {
+    color: #30a2ff;
+  }
+}
+
+#container {
+  width: 28rem;
+  height: auto;
+  // background: linear-gradient(
+  //     212.38deg,
+  //     rgba(15, 3, 59, 0.75) 0%,
+  //     rgba(39, 3, 105, 0.75) 100%
+  //   ),
+  //   url(../../../../assets/images/products/register-bg.jpg);
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // background-position: center;
+  border: 1px solid #ffffff;
+  border-radius: 30px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+header {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 3rem;
+  height: 3rem;
+  background: rgba(3, 3, 55, 0.7);
+  font-size: 1.4rem;
+  color: #d3d3d3;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+fieldset {
+  border: 0;
+  text-align: center;
+}
+
+input[type="submit"] {
+  border: 1px solid #ffffff;
+  width: 90%;
+  margin-bottom: 3rem;
+  color: white;
+  padding: 0.7rem;
+  cursor: pointer;
+}
+
+input {
+  background: transparent;
+  border: 0;
+  border: 1px solid #ffffff;
+  padding: 10px;
+  color: white;
+  width: 90%;
+  border-radius: 10px;
+}
+
+input:hover {
+  background: rgba(79, 17, 224, 0.178);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  outline: 0;
+  background: rgba(79, 17, 224, 0.178);
+  border-color: transparent;
+  border: 1px solid #ffffff;
+}
+
+::placeholder {
+  color: #d3d3d3;
+}
+
+/*Media queries */
+
+@media all and (min-width: 481px) and (max-width: 568px) {
+  #container {
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+}
+@media all and (min-width: 569px) and (max-width: 768px) {
+  #container {
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+}
+/*--thank you pop starts here--*/
+.thank-you-pop {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+.thank-you-pop img {
+  width: 76px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 25px;
+}
+
+.thank-you-pop h1 {
+  font-size: 42px;
+  margin-bottom: 25px;
+  color: #5c5c5c;
+}
+.thank-you-pop p {
+  font-size: 20px;
+  margin-bottom: 27px;
+  color: #5c5c5c;
+}
+.thank-you-pop h3.cupon-pop {
+  font-size: 25px;
+  margin-bottom: 40px;
+  color: #222;
+  display: inline-block;
+  text-align: center;
+  padding: 10px 20px;
+  border: 2px dashed #222;
+  clear: both;
+  font-weight: normal;
+}
+.thank-you-pop h3.cupon-pop span {
+  color: #03a9f4;
+}
+.thank-you-pop a {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 9px 20px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 14px;
+  background-color: #8bc34a;
+  border-radius: 17px;
+}
+.thank-you-pop a i {
+  margin-right: 5px;
+  color: #fff;
+}
+#ignismyModal .modal-header {
+  border: 0px;
+}
+/*--thank you pop ends here--*/
+
+@media (max-width: 768px) {
+  .reg-logo {
+    text-align: center;
+  }
+  #container {
+    width: 100%;
+  }
+
+  .reg-head h1 {
+    font-size: 2rem;
+    line-height: normal;
+    margin-bottom: 1rem;
+  }
+
+  // .reg-head h1 br {
+  //   display: none;
+  // }
+
+  .register-form {
+    height: auto;
+    padding: 2rem 1rem;
+  }
+}

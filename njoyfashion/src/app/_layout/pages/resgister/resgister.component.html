@@ -1,0 +1,130 @@
+<div class="register-form">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="reg-logo">
+        <img src="../../../../assets/images/logo/logo.png" alt="" />
+      </div>
+      <div class="reg-head">
+        <h1>
+          Register <span>Now</span><br />
+          <span>Get</span> a<br />
+          <span>Discount</span><br />
+        </h1>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div id="container">
+        <header>Register</header>
+        <form [formGroup]="submitForm" (ngSubmit)="register()">
+          <fieldset>
+            <br />
+            <input
+              type="text"
+              name="username"
+              id="username"
+              placeholder="Username"
+              formControlName="userName"
+              required
+              autofocus
+            />
+            <div
+              *ngIf="
+                submitForm.get('userName')?.invalid &&
+                (submitForm.get('userName')?.dirty ||
+                  submitForm.get('userName')?.touched)
+              "
+              class="w-100 error"
+              style="
+                color: #ff4d4f;
+                font-size: 10px;
+                text-align: start;
+                margin-left: 25px;
+              "
+            >
+              <div *ngIf="submitForm.get('userName')?.errors?.['required']">
+                Required!
+              </div>
+            </div>
+            <br /><br />
+            <input
+              type="tel"
+              name=""
+              id="email"
+              placeholder="Phone Number"
+              formControlName="mobileNumber"
+              required
+            />
+            <div
+              *ngIf="
+                submitForm.get('mobileNumber')?.invalid &&
+                (submitForm.get('mobileNumber')?.dirty ||
+                  submitForm.get('mobileNumber')?.touched)
+              "
+              class="w-100 error"
+              style="
+                color: #ff4d4f;
+                font-size: 10px;
+                text-align: start;
+                margin-left: 25px;
+              "
+            >
+              <div *ngIf="submitForm.get('mobileNumber')?.errors?.['required']">
+                Required!
+              </div>
+            </div>
+            <br /><br />
+            <!-- <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password"
+              required
+            />
+            <br /><br />
+            <input
+              type="password"
+              name="confirm-password"
+              id="confirm-password"
+              placeholder="Confirm Password"
+              required
+            />
+            <br />
+            <br /> -->
+            <input
+              type="text"
+              name="address"
+              id="address"
+              placeholder="Address"
+              formControlName="address"
+              required
+              autofocus
+            />
+            <div
+              *ngIf="
+                submitForm.get('address')?.invalid &&
+                (submitForm.get('address')?.dirty ||
+                  submitForm.get('address')?.touched)
+              "
+              class="w-100 error"
+              style="
+                color: #ff4d4f;
+                font-size: 10px;
+                text-align: start;
+                margin-left: 25px;
+              "
+            >
+              <div *ngIf="submitForm.get('address')?.errors?.['required']">
+                Required!
+              </div>
+            </div>
+            <br />
+            <br />
+            <br />
+            <label for="submit"></label>
+            <input type="submit" name="submit" id="submit" value="Register" />
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
